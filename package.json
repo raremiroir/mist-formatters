@@ -6,19 +6,19 @@
 	"exports": {
 		".": {
 			"types": "./index.d.ts",
-			"main": "./index.js"
+			"default": "./index.js"
 		},
     "./color": {
       "types": "./src/format/color/index.d.ts",
-      "main": "./src/format/color/index.js"
+      "default": "./src/format/color/index.js"
     },
     "./text": {
       "types": "./src/format/text/index.d.ts",
-      "main": "./src/format/text/index.js"
+      "default": "./src/format/text/index.js"
     },
     "./datetime": {
       "types": "./src/format/datetime/index.d.ts",
-      "main": "./src/format/datetime/index.js"
+      "default": "./src/format/datetime/index.js"
     }
 	},
   "scripts": {
