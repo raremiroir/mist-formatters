@@ -1,6 +1,3 @@
-// All formatters
-export { default as mFormat } from './src/format';
-
 // Text formatters
 export { formatText } from './src/format/text';
 // Date formatters
