@@ -7,3 +7,5 @@ export const mFormat = {
    datetime: formatDT,
    color: formatColor,
 }
+
+export default mFormat;
