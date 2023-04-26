@@ -1,6 +1,6 @@
 {
   "name": "@mistmedia/format",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Formatter functions for Mist Framework",
   "main": "index.js",
 	"exports": {
