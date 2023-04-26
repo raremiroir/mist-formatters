@@ -1,1 +1,0 @@
-export { formatColor }  from './index'

@@ -1,8 +1,6 @@
-import { ColorFormatHex, ColorFormatHsl } from "./color";
-
 export const formatHEX = {
    // #123456 => {r: 18, g: 52, b: 86}
-   toRgb: (hex:ColorFormatHex) => {
+   toRgb: (hex) => {
       // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
       var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
       hex = hex.replace(shorthandRegex, function(m, r, g, b) {
@@ -18,7 +16,7 @@ export const formatHEX = {
    },
    
    // #123456 => {h: 210, s: 72, l: 20}
-   toHsl: (hex:ColorFormatHex) => {
+   toHsl: (hex) => {
       const rgb = formatHEX.toRgb(hex);
       const r = rgb.r / 255, g = rgb.g / 255, b = rgb.b / 255;
       const max = Math.max(r, g, b), min = Math.min(r, g, b);

@@ -1,5 +1,5 @@
-import { formatChars } from "./chars";
-import { CharsLocales } from "./chars/chars";
+import { formatChars } from "../../../src/format/text/chars";
+import { CharsLocales } from "../../../src/format/text/chars/chars";
 import { textCapitalize } from "./core";
 import { formatPrice } from "./price";
 import { formatSlug } from "./url";
