@@ -2,9 +2,8 @@
   "name": "@mistmedia/format",
   "version": "0.0.6",
   "description": "Formatter functions for Mist Framework",
-  "scripts": {
-    "build": "tsup index.ts --format csj,esm --dts"
-  },
+  "author": "@raremiroir",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/raremiroir/mist-formatters"
@@ -21,18 +20,15 @@
     "ts",
     "typescript"
   ],
-  "files": [
-    "./dist/index.js",
-    "./dist/index.d.ts",
-    "./dist/**/*",
-    "./dist/**/**/*",
-    "./dist/**/**/**/*",
-    "!./dist/**/*.test.*"
-  ],
-  "author": "@raremiroir",
-  "license": "MIT",
+
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "lint": "tsc"
+  },
   "type": "module",
-  "types": "index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -46,6 +42,14 @@
       ]
     }
   },
+  "files": [
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./dist/**/*",
+    "./dist/**/**/*",
+    "./dist/**/**/**/*",
+    "!./dist/**/*.test.*"
+  ],
   "devDependencies": {
     "tsup": "^6.7.0",
     "typescript": "^5.0.4"
