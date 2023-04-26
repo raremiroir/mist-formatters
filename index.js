@@ -1,4 +1,3 @@
-import { mFormat } from './src/format';
 import { formatText } from './src/format/text';
 import { formatDT } from './src/format/datetime';
 import { formatColor } from './src/format/color';
@@ -17,4 +16,4 @@ export { formatDT as formatDateTime } from './src/format/datetime';
 // Color formatters
 export { formatColor } from './src/format/color';
 
-module.exports = mFormat;
+export default mFormat;
