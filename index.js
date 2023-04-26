@@ -1,5 +1,5 @@
 // All formatters
-export { mFormat } from './src/format';
+export { default as mFormat } from './src/format/index';
 
 // Text formatters
 export { formatText } from './src/format/text';
