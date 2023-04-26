@@ -1,0 +1,33 @@
+{
+  "name": "@mistmedia/format",
+  "version": "0.0.1",
+  "description": "Formatter functions for Mist Framework",
+  "main": "index.js",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"main": "./index.js"
+		}
+	},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mist",
+    "formatters",
+    "format",
+    "formatter",
+    "js",
+    "ts",
+    "typescript"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src/format/color/",
+    "src/format/datetime/",
+    "src/format/text/"
+  ],
+  "author": "@raremiroir",
+  "license": "MIT"
+}
