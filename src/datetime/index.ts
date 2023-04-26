@@ -1,27 +1,28 @@
-import { formatDateNowLocale } from "./date";
-import { formatTimeNowLocale } from "./time";
+import { formatDate } from "./date";
+import { DateTimeFormat, DateTimeFormatType } from "./datetime";
+import { formatTime } from "./time";
 
 export const formatDateTime = {
    type: {
-      digOrNum: (type) => {
+      digOrNum: (type: DateTimeFormatType) => {
          return type === '2-digit' || type === 'short' || type === 'narrow' ? '2-digit' : 'numeric';
       },
    },
    now: {
-      locale: (options) => {
+      locale: (options: DateTimeFormat['options']) => {
          let locale = options.locale?? 'nl-BE';
          let type = options.type?? 'short';
-         const { year, month, day } = formatDateNowLocale({ locale, type});
-         const { hour, minute, second } = formatTimeNowLocale({ locale, type});
+         const { year, month, day } = formatDate.now.locale({ locale, type});
+         const { hour, minute, second } = formatTime.now.locale({ locale, type});
          return { year, month, day, hour, minute, second };
       },
-      iso: (options) => {
+      iso: (options: DateTimeFormat['options']) => {
          let locale = options.locale?? 'nl-BE';
          let type = options.type?? 'short';
          const { year, month, day, hour, minute, second } = formatDateTime.now.locale({ locale, type});
          return `${year}-${month}-${day}T${hour}:${minute}:${second}`;
       },
-      timestamp: (options) => {
+      timestamp: (options: DateTimeFormat['options']) => {
          let locale = options.locale?? 'nl-BE';
          let type = options.type?? 'short';
          const { year, month, day, hour, minute, second } = formatDateTime.now.locale({ locale, type});
@@ -31,9 +32,9 @@ export const formatDateTime = {
    },
    
    date: {
-      now: (options) => formatDateNowLocale(options),
+      now: (options: DateTimeFormat['options']) => formatDate.now.locale(options),
    },
    time: {
-      now: (options) => formatTimeNowLocale(options),
+      now: (options: DateTimeFormat['options']) => formatTime.now.locale(options),
    }
 }

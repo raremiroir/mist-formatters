@@ -1,4 +1,4 @@
-import { formatChars } from "../../../src/format/text/chars";
+import { formatChars } from "./chars";
 
 export const formatSlug = (str: string, locale: 'nl'|'en'|'fr') => {
 
