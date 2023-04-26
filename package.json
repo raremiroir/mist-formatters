@@ -1,28 +1,16 @@
 {
   "name": "@mistmedia/format",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Formatter functions for Mist Framework",
-  "main": "index.js",
-	"exports": {
-		".": {
-			"types": "./index.d.ts",
-			"default": "./index.js"
-		},
-    "./color": {
-      "types": "./src/format/color/index.d.ts",
-      "default": "./src/format/color/index.js"
-    },
-    "./text": {
-      "types": "./src/format/text/index.d.ts",
-      "default": "./src/format/text/index.js"
-    },
-    "./datetime": {
-      "types": "./src/format/datetime/index.d.ts",
-      "default": "./src/format/datetime/index.js"
-    }
-	},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup index.ts --format csj,esm --dts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raremiroir/mist-formatters"
+  },
+  "bugs": {
+    "url": "https://github.com/raremiroir/mist-formatters/issues"
   },
   "keywords": [
     "mist",
@@ -34,13 +22,32 @@
     "typescript"
   ],
   "files": [
-    "index.js",
-    "index.d.ts",
-    "src/format/color/",
-    "src/format/datetime/",
-    "src/format/text/"
+    "./dist/index.js",
+    "./dist/index.d.ts",
+    "./dist/**/*",
+    "./dist/**/**/*",
+    "./dist/**/**/**/*",
+    "!./dist/**/*.test.*"
   ],
   "author": "@raremiroir",
   "license": "MIT",
-  "type": "module"
+  "type": "module",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "devDependencies": {
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
 }
